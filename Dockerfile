@@ -1,4 +1,4 @@
-# builld static export
+# builld static export with alpine
 FROM node:20-alpine AS builder
 
 #set root web project as working directory
