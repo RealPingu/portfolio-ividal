@@ -1,5 +1,5 @@
 # builld static export with alpine
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 
 #set root web project as working directory
 WORKDIR /app
