@@ -7,7 +7,7 @@ import Section from '@/app/components/UI/section';
 
 export default function Hero() {
     return (
-        <Section id="hero" className="flex-col-reverse md:flex-row items-center justify-between gap-12 px-5">
+        <Section id="hero" className="flex-col-reverse md:flex-row items-center justify-center gap-2 md:gap-16 px-5">
 
             {/* Left Column: Text */}
             <div className="flex-1 flex flex-col gap-3 text-center md:text-left">

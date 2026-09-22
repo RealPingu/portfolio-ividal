@@ -21,17 +21,17 @@ export default function About() {
                     return (
                         <div
                             key={idx}
-                            className={`card lg:card-side bg-base-200 shadow-sm border border-base-300 overflow-hidden hover:shadow-md transition-all duration-300 ${
-                                isReversed ? 'lg:flex-row-reverse' : ''
+                            className={`card md:card-side bg-base-200 shadow-sm border border-base-300 overflow-hidden hover:shadow-md transition-all duration-300 ${
+                                isReversed ? 'md:flex-row-reverse' : ''
                             }`}
                         >
                             {/* 1. Image slot */}
-                            <figure className="lg:w-1/3 min-h-48 lg:min-h-full bg-base-300/60 flex items-center justify-center shrink-0">
+                            <figure className="w-full md:w-2/5 lg:w-1/3 aspect-video md:aspect-auto bg-base-300/60 flex items-center justify-center shrink-0 overflow-hidden">
                                 {card.image ? (
                                     <img
                                         src={card.image}
                                         alt={card.title}
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-full object-cover object-center"
                                     />
                                 ) : (
                                     <span className="text-sm opacity-40 italic">
@@ -41,7 +41,7 @@ export default function About() {
                             </figure>
 
                             {/* 2. Card Body */}
-                            <div className="card-body lg:w-2/3 p-6 lg:p-8 justify-center space-y-2">
+                            <div className="card-body flex-1 p-6 lg:p-8 justify-center space-y-2">
                                 <h2 className="card-title text-xl lg:text-2xl font-bold text-base-content">
                                     {card.title}
                                 </h2>
