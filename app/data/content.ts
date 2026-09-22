@@ -8,7 +8,7 @@ export const heroData = {
     buttons: {
         getResume: { label: "Get my resume", href: "#resume" }
     },
-    portrait: "/inti-portrait.jpg",
+    portrait: "/inti-portrait-2.jpg",
 };
 
 export const navData = {
