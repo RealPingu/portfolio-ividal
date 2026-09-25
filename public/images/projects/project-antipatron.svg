@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <!-- Background matching About cards exactly -->
+  <rect width="100%" height="100%" fill="#eee1c5"/>
+
+  <!-- Geometric Bauhaus Protagonist Penguin (Variation 2 Custom) -->
+  <g transform="translate(200, 150)">
+    <!-- Geometric Feet -->
+    <polygon points="-20,68 -28,78 -10,78" fill="#f59e0b" stroke="#2e282a" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="20,68 28,78 10,78" fill="#f59e0b" stroke="#2e282a" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- Geometric Body Outer -->
+    <path d="M 0,-70 L 36,-30 L 40,40 L 25,68 L -25,68 L -40,40 L -36,-30 Z" fill="#2e282a" stroke="#2e282a" stroke-width="2.5" stroke-linejoin="round"/>
+    
+    <!-- White Filled Geometric Arms/Wings -->
+    <polygon points="-36,-10 -56,18 -38,36" fill="#fcfaf4" stroke="#2e282a" stroke-width="2.5" stroke-linejoin="round"/>
+    <polygon points="36,-10 56,18 38,36" fill="#fcfaf4" stroke="#2e282a" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- White Diamond Belly -->
+    <polygon points="0,-10 24,22 18,62 -18,62 -24,22" fill="#fcfaf4" stroke="#2e282a" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- Eye Dots -->
+    <circle cx="-12" cy="-42" r="2.5" fill="#fcfaf4"/>
+    <circle cx="12" cy="-42" r="2.5" fill="#fcfaf4"/>
+
+    <!-- Sharp Geometric Beak -->
+    <polygon points="0,-36 8,-26 -8,-26" fill="#f59e0b" stroke="#2e282a" stroke-width="2" stroke-linejoin="round"/>
+
+    <!-- Geometric Red Scarf covering entire neck from edge to edge -->
+    <rect x="-38" y="-22" width="76" height="15" rx="2" fill="#ef4444" stroke="#2e282a" stroke-width="2.5"/>
+    <polygon points="8,-7 22,-7 17,32 5,32" fill="#dc2626" stroke="#2e282a" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+</svg>

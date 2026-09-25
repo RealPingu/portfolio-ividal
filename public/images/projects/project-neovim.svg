@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <!-- Background matching About and Project cards -->
+  <rect width="100%" height="100%" fill="#eee1c5"/>
+
+  <!-- Left: Minimalist Neovim Logo -->
+  <g transform="translate(130, 150)">
+    <!-- Left Pillar -->
+    <polygon points="-30,-50 -14,-40 -14,40 -30,30" fill="#16a34a" stroke="#2e282a" stroke-width="2.5" stroke-linejoin="round"/>
+    
+    <!-- Right Pillar -->
+    <polygon points="14,-40 30,-50 30,30 14,40" fill="#0284c7" stroke="#2e282a" stroke-width="2.5" stroke-linejoin="round"/>
+    
+    <!-- Diagonal Fold Ribbon (Isometric N) -->
+    <polygon points="-14,-40 14,10 14,40 -14,-10" fill="#57A143" stroke="#2e282a" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Right: Official Wallpaper Engine Logo (Interlocking Dual Frame & Gear) -->
+  <g transform="translate(270, 150)">
+    <!-- Top-Right Cyan/Blue Rounded Frame -->
+    <path d="M -15,-40 L 25,-40 C 36,-40 44,-32 44,-21 L 44,15 C 44,26 36,34 25,34 L 10,34" 
+          fill="none" 
+          stroke="#38bdf8" 
+          stroke-width="7" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    <path d="M -15,-40 L 25,-40 C 36,-40 44,-32 44,-21 L 44,15 C 44,26 36,34 25,34 L 10,34" 
+          fill="none" 
+          stroke="#2e282a" 
+          stroke-width="1.8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Bottom-Left White Rounded Frame -->
+    <path d="M 15,40 L -25,40 C -36,40 -44,32 -44,21 L -44,-15 C -44,-26 -36,-34 -25,-34 L -10,-34" 
+          fill="none" 
+          stroke="#fcfaf4" 
+          stroke-width="7" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    <path d="M 15,40 L -25,40 C -36,40 -44,32 -44,21 L -44,-15 C -44,-26 -36,-34 -25,-34 L -10,-34" 
+          fill="none" 
+          stroke="#2e282a" 
+          stroke-width="1.8" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+
+    <!-- Central Interlocking Gear Body -->
+    <!-- Gear Outer Circle with teeth -->
+    <circle cx="0" cy="0" r="22" fill="#38bdf8" stroke="#2e282a" stroke-width="2"/>
+    
+    <!-- 6 Gear Teeth -->
+    <!-- Top Tooth -->
+    <rect x="-6" y="-29" width="12" height="8" rx="1.5" fill="#fcfaf4" stroke="#2e282a" stroke-width="1.8"/>
+    <!-- Bottom Tooth -->
+    <rect x="-6" y="21" width="12" height="8" rx="1.5" fill="#38bdf8" stroke="#2e282a" stroke-width="1.8"/>
+    <!-- Right Tooth -->
+    <rect x="21" y="-6" width="8" height="12" rx="1.5" fill="#fcfaf4" stroke="#2e282a" stroke-width="1.8"/>
+    <!-- Left Tooth -->
+    <rect x="-29" y="-6" width="8" height="12" rx="1.5" fill="#38bdf8" stroke="#2e282a" stroke-width="1.8"/>
+    <!-- Top-Right Diagonal Tooth -->
+    <g transform="rotate(45)">
+      <rect x="-5.5" y="-29" width="11" height="8" rx="1.5" fill="#fcfaf4" stroke="#2e282a" stroke-width="1.8"/>
+    </g>
+    <!-- Bottom-Left Diagonal Tooth -->
+    <g transform="rotate(45)">
+      <rect x="-5.5" y="21" width="11" height="8" rx="1.5" fill="#38bdf8" stroke="#2e282a" stroke-width="1.8"/>
+    </g>
+
+    <!-- Gear Inner Hole -->
+    <circle cx="0" cy="0" r="11" fill="#fcfaf4" stroke="#2e282a" stroke-width="2"/>
+  </g>
+</svg>
