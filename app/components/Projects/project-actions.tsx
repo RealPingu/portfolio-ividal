@@ -26,7 +26,7 @@ export default function ProjectActions({
                     href={codeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-sm btn-outline hover:btn-primary"
+                    className="btn btn-sm btn-outline hover:btn-success"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ export default function ProjectActions({
                     href={demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-sm btn-primary"
+                    className="btn btn-sm btn-success"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

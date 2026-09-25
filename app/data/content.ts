@@ -4,9 +4,9 @@ export const heroData = {
     degrees: ["Civil IT Engineer",
         "Bachelor of Science in Computer Science"],
     university: "Universidad Técnica Federico Santa María",
-    about: "Welcome to my web portfolio, I build modern solutions focused on the requirements of my clients. I'm interested in everything tech, exploring new sides of the industry and implementing new ideas.",
+    about: "Welcome to my web portfolio. I build modern solutions focused on the requirements of my clients. I'm interested in everything tech, exploring new sides of the industry and implementing new ideas.",
     buttons: {
-        getResume: { label: "Get my resume", href: "#resume" }
+        getResume: { label: "Get my resume", href: "/intividal_cv.pdf" }
     },
     portrait: "/images/hero/inti-portrait-colored.jpg",
 };
@@ -19,6 +19,7 @@ export const navData = {
         { label: "Projects", href: "#projects" },
         { label: "Contact", href: "#contact" },
     ],
+    resumeButton: { label: "Resume", href: "/intividal_cv.pdf" },
 };
 
 export const aboutData = {
@@ -112,6 +113,40 @@ export const projectsData = {
     ],
 };
 
-// later
-export const footerData = {};
+export const contactData = {
+    title: "Get in Touch",
+    subtitle: "Whether you have an opportunity, a project to collaborate on, or just want to connect, feel free to reach out.",
+    cards: [
+        {
+            title: "Offer A Job Opportunity?",
+            text: "I am open to discussing full-time software engineering roles and collaborations. With strong foundations in systems, web development, and algorithmic optimization, I am interested in roles that tackle exciting and meaningful challenges.",
+        },
+        {
+            title: "Build Something Together?",
+            text: "I love designing and engineering robust software solutions from concept to deployment. If you have an innovative idea, a system to optimize, or an MVP to build, let's create something great together.",
+        },
+        {
+            title: "Connect & Chat?",
+            text: "I'm always eager to exchange ideas with fellow engineers, researchers, and tech enthusiasts. Let's connect on LinkedIn or over email!",
+        },
+    ],
+    links: [
+        {
+            label: "Email Me",
+            href: "mailto:inti.vidal@usm.cl",
+            icon: "email",
+        },
+        {
+            label: "LinkedIn",
+            href: "https://www.linkedin.com/in/inti-vidal",
+            icon: "linkedin",
+        },
+        {
+            label: "GitHub",
+            href: "https://github.com/RealPingu",
+            icon: "github",
+        },
+    ],
+};
+
 

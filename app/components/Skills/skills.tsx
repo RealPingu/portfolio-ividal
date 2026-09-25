@@ -2,7 +2,7 @@
 import { skillsData } from '@/app/data/content';
 import Section from '@/app/components/UI/section';
 
-const dotColors = ["bg-primary", "bg-secondary", "bg-warning", "bg-info"];
+const dotColors = ["bg-success", "bg-secondary", "bg-warning", "bg-info"];
 
 export default function Skills() {
     return (
@@ -32,7 +32,7 @@ export default function Skills() {
                             {category.skills.map((skill, sIdx) => (
                                 <span
                                     key={sIdx}
-                                    className="badge badge-lg bg-base-100 border-base-300 text-base-content hover:badge-primary hover:border-primary cursor-default transition-all duration-200 hover:scale-105 px-3.5 py-3 text-sm font-medium shadow-2xs"
+                                    className="badge badge-lg bg-base-100 border-base-300 text-base-content hover:badge-success hover:border-success cursor-default transition-all duration-200 hover:scale-105 px-3.5 py-3 text-sm font-medium shadow-2xs"
                                 >
                                     {skill}
                                 </span>

@@ -22,6 +22,11 @@ export default function Hero() {
                                 {role}
                             </span>
                         ))}
+                        {heroData.university && (
+                            <span className="badge badge-outline text-xs md:text-sm">
+                                {heroData.university}
+                            </span>
+                        )}
                     </div>
                 </div>
 
@@ -30,7 +35,12 @@ export default function Hero() {
                 </p>
 
                 <div className="flex gap-4 justify-center md:justify-start">
-                    <a href={heroData.buttons.getResume.href} className="btn btn-success btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">
+                    <a
+                        href={heroData.buttons.getResume.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-success btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"
+                    >
                         {heroData.buttons.getResume.label}
                     </a>
                 </div>

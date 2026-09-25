@@ -12,6 +12,9 @@ const slabo = Slabo_13px({
 export const metadata: Metadata = {
     title: "Inti Vidal",
     description: "My portfolio website",
+    icons: {
+        icon: "/icon.svg",
+    },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -27,14 +30,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                     <Navbar />
                 </div>
 
-                <main className="flex-1 w-full max-w-6xl xl:max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+                <main className="flex-1 w-full max-w-6xl xl:max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-16">
                     {children}
                 </main>
-
-                {/* 3. Global footer */}
-                <footer className="p-6 text-center opacity-60">
-                    this is a footer
-                </footer>
             </body>
         </html>
     );
