@@ -28,8 +28,47 @@ export const contentEn: ContentDictionary = {
         resumeButton: { label: "Resume", href: "/intividal_cv_en.pdf" },
     },
     aboutData: {
+        timelineTitle: "Experience & Education Timeline",
+        timelineSubtitle: "Key milestones throughout my academic path and professional software engineering journey.",
+        timeline: [
+            {
+                period: "2019",
+                title: "Started Civil IT Engineering",
+                organization: "Universidad Técnica Federico Santa María (UTFSM)",
+                description: "Began university degree with focus on software architecture, distributed systems, OOP, data structures, and algorithmic optimization.",
+                type: "education",
+            },
+            {
+                period: "Dec 2023 – Feb 2024",
+                title: "Software Engineering Intern",
+                organization: "Meterbee SpA",
+                description: "Built telemetry observability pipeline for mining pumps with InfluxDB/Grafana API and automated executive reporting via Python.",
+                type: "work",
+            },
+            {
+                period: "Jul 2024 – Aug 2024",
+                title: "Software Engineering Intern",
+                organization: "Eproc Soluciones de Software SpA",
+                description: "Integrated third-party digital signature web services into the core enterprise platform with resilient RESTful APIs.",
+                type: "work",
+            },
+            {
+                period: "Oct 2025 – Jan 2026",
+                title: "Junior Software Engineer",
+                organization: "Meterbee SpA",
+                description: "Engineered full-stack platform with Python (Frappe/Jinja3), DigitalOcean Ubuntu deployment, GitLab CI/CD, and OCR ingestion.",
+                type: "work",
+            },
+            {
+                period: "August 7, 2026",
+                title: "Thesis Defense & Official Graduation",
+                organization: "Universidad Técnica Federico Santa María (UTFSM)",
+                description: "Defended capstone thesis on Dark Patterns (Antipatrón) and officially obtained the Civil IT Engineer title.",
+                type: "graduation",
+            },
+        ],
         title: "My Journey",
-        subtitle: "A brief look into my background, focus, and perspective on engineering.",
+        subtitle: "A comprehensive look into my academic path, career milestones, and engineering philosophy.",
         cards: [
             {
                 title: "Background & Education",

@@ -28,8 +28,47 @@ export const contentEs: ContentDictionary = {
         resumeButton: { label: "CV", href: "/intividal_cv_es.pdf" },
     },
     aboutData: {
+        timelineTitle: "Línea de Tiempo: Experiencia y Educación",
+        timelineSubtitle: "Hitos principales a lo largo de mi formación universitaria y experiencia profesional en ingeniería de software.",
+        timeline: [
+            {
+                period: "2019",
+                title: "Ingreso a Ingeniería Civil Informática",
+                organization: "Universidad Técnica Federico Santa María (UTFSM)",
+                description: "Inicio de la carrera universitaria con foco en arquitectura de software, sistemas distribuidos, POO, estructuras de datos y optimización algorítmica.",
+                type: "education",
+            },
+            {
+                period: "Dic. 2023 – Feb. 2024",
+                title: "Práctica Profesional (Ingeniería de Software)",
+                organization: "Meterbee SpA",
+                description: "Desarrollo de pipeline de observabilidad telemétrica para bombas mineras con InfluxDB/Grafana API y automatización de reportes en Python.",
+                type: "work",
+            },
+            {
+                period: "Jul. 2024 – Ago. 2024",
+                title: "Práctica Profesional (Ingeniería de Software)",
+                organization: "Eproc Soluciones de Software SpA",
+                description: "Integración de servicios web de firma digital en la plataforma central empresarial mediante APIs RESTful resilientes.",
+                type: "work",
+            },
+            {
+                period: "Oct. 2025 – Ene. 2026",
+                title: "Desarrollador Junior",
+                organization: "Meterbee SpA",
+                description: "Implementación de plataforma FullStack con Python (Frappe/Jinja3), despliegue en Ubuntu/DigitalOcean, GitLab CI/CD y procesamiento OCR.",
+                type: "work",
+            },
+            {
+                period: "7 de Agosto, 2026",
+                title: "Defensa de Memoria y Titulación Oficial",
+                organization: "Universidad Técnica Federico Santa María (UTFSM)",
+                description: "Defensa exitosa de la memoria de título sobre Dark Patterns (Antipatrón), obteniendo oficialmente el título de Ingeniero Civil Informático.",
+                type: "graduation",
+            },
+        ],
         title: "Mi Trayectoria",
-        subtitle: "Un breve recorrido por mi historia, enfoque y perspectiva sobre la ingeniería.",
+        subtitle: "Un recorrido completo por mi formación académica, trayectoria profesional y perspectiva de ingeniería.",
         cards: [
             {
                 title: "Educación y Antecedentes",

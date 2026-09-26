@@ -4,6 +4,7 @@
 import React from 'react';
 import { useLanguage } from "@/app/context/language-context";
 import Section from "@/app/components/UI/section";
+import CareerTimeline from "@/app/components/About/timeline";
 
 export default function About() {
     const { t } = useLanguage();
@@ -11,6 +12,7 @@ export default function About() {
 
     return (
         <Section id="about" className="space-y-12">
+            {/* 1. My Journey Narrative Header */}
             <div className="text-center max-w-2xl mx-auto">
                 <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-base-content">
                     {aboutData.title}
@@ -19,8 +21,14 @@ export default function About() {
                     {aboutData.subtitle}
                 </p>
             </div>
-            {/* Single-Column Alternating Cards */}
-            <div className="flex flex-col gap-8 max-w-5xl mx-auto w-full">
+
+            {/* 2. Interactive Career & Academic Timeline */}
+            <div className="max-w-5xl mx-auto w-full">
+                <CareerTimeline />
+            </div>
+
+            {/* 3. Narrative Story Cards */}
+            <div className="flex flex-col gap-8 max-w-5xl mx-auto w-full pt-4">
                 {aboutData.cards.map((card, idx) => {
                     const isReversed = idx % 2 === 1;
 

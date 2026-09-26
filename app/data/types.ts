@@ -14,6 +14,14 @@ export interface ProjectItem {
     thesisUrl?: string;
 }
 
+export interface TimelineItem {
+    period: string;
+    title: string;
+    organization: string;
+    description: string;
+    type: 'education' | 'work' | 'graduation';
+}
+
 export interface ContentDictionary {
     heroData: {
         greeting: string;
@@ -32,6 +40,9 @@ export interface ContentDictionary {
         resumeButton: { label: string; href: string };
     };
     aboutData: {
+        timelineTitle?: string;
+        timelineSubtitle?: string;
+        timeline: TimelineItem[];
         title: string;
         subtitle: string;
         cards: {
