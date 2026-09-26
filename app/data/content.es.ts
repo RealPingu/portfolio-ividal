@@ -107,10 +107,10 @@ export const contentEs: ContentDictionary = {
             {
                 name: "Optimización de Entregas con Camión y Drones (k-MVDRP)",
                 role: "Ingeniería Algorítmica (2024)",
-                description: "Algoritmos de búsqueda heurística de alto rendimiento implementados en C++ para resolver el ruteo coordinado de entregas con múltiples drones bajo restricciones de vuelo dinámicas, modelando consumo de batería, límites de carga útil y sincronización de despegue/recuperación con camiones.",
-                technologies: ["C++", "Búsqueda Heurística", "POO", "Estructuras de Datos", "Optimización"],
+                description: "Algoritmos de optimización combinatoria y búsqueda heurística en C++ para resolver el problema de ruteo coordinado de camión y flota de drones (k-MVDRP / mFSTSP). Modela capacidad de carga útil multi-paquete, sincronización de despegue y aterrizaje desacoplada y minimización del tiempo total de misión (makespan).",
+                technologies: ["C++17", "Optimización Combinatoria", "Búsqueda Heurística", "POO", "Estructuras de Datos"],
                 image: "/images/projects/project-drone.svg",
-                codeUrl: "",
+                codeUrl: "https://github.com/RealPingu/Proyecto-IA-2024",
                 demoUrl: "",
             },
         ],
