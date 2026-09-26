@@ -2,12 +2,15 @@
 'use client';
 
 import React from 'react';
+import { useLanguage } from '@/app/context/language-context';
 
 export default function ScrollIndicator() {
+    const { t } = useLanguage();
+
     return (
         <a
             href="#about"
-            aria-label="Scroll to About section"
+            aria-label={t.scrollIndicatorLabel}
             className="group flex flex-col items-center gap-1.5 text-base-content/50 hover:text-base-content transition-colors duration-300 cursor-pointer pt-6 md:pt-4"
         >
             {/* Mouse contour */}

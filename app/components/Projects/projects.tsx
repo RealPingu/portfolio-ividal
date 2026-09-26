@@ -1,9 +1,15 @@
+// app/components/Projects/projects.tsx
 'use client';
-import { projectsData } from '@/app/data/content';
+
+import React from 'react';
+import { useLanguage } from '@/app/context/language-context';
 import Section from '@/app/components/UI/section';
 import ProjectActions from './project-actions';
 
 export default function Projects() {
+    const { t } = useLanguage();
+    const { projectsData } = t;
+
     return (
         <Section id="projects" className="space-y-12">
             {/* Header */}
@@ -74,8 +80,8 @@ export default function Projects() {
                                 <ProjectActions
                                     codeUrl={project.codeUrl}
                                     demoUrl={project.demoUrl}
-                                    demoLabel={'demoLabel' in project ? (project.demoLabel as string) : 'Live Demo'}
-                                    thesisUrl={'thesisUrl' in project ? (project.thesisUrl as string) : undefined}
+                                    demoLabel={project.demoLabel}
+                                    thesisUrl={project.thesisUrl}
                                 />
                             </div>
                         </div>

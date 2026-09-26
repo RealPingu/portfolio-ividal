@@ -1,11 +1,15 @@
 // app/components/Contact/contact.tsx
 'use client';
 
-import { contactData } from '@/app/data/content';
+import React from 'react';
+import { useLanguage } from '@/app/context/language-context';
 import Section from '@/app/components/UI/section';
 import ContactActions from '@/app/components/Contact/contact-actions';
 
 export default function Contact() {
+    const { t } = useLanguage();
+    const { contactData } = t;
+
     return (
         <Section id="contact" className="flex-col gap-10">
             {/* Header */}
@@ -41,10 +45,10 @@ export default function Contact() {
             <div className="w-full bg-base-200/70 border border-base-300 rounded-box p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div className="text-center sm:text-left">
                     <h3 className="text-xl font-bold text-base-content">
-                        Ready to talk?
+                        {contactData.banner.title}
                     </h3>
                     <p className="text-sm text-base-content/70 mt-1">
-                        Pick whichever communication channel you prefer.
+                        {contactData.banner.subtitle}
                     </p>
                 </div>
 

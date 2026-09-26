@@ -1,10 +1,16 @@
+// app/components/Skills/skills.tsx
 'use client';
-import { skillsData } from '@/app/data/content';
+
+import React from 'react';
+import { useLanguage } from '@/app/context/language-context';
 import Section from '@/app/components/UI/section';
 
 const dotColors = ["bg-success", "bg-secondary", "bg-warning", "bg-info"];
 
 export default function Skills() {
+    const { t } = useLanguage();
+    const { skillsData } = t;
+
     return (
         <Section id="skills" className="space-y-10">
             {/* Header */}

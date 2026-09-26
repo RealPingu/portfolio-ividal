@@ -1,12 +1,16 @@
 // app/components/Hero/hero.tsx                                                        
 'use client';
 
-import { heroData } from '@/app/data/content';
+import React from 'react';
+import { useLanguage } from '@/app/context/language-context';
 import Portrait from '@/app/components/Hero/portrait';
 import Section from '@/app/components/UI/section';
 import ScrollIndicator from '@/app/components/Hero/scroll-indicator';
 
 export default function Hero() {
+    const { t } = useLanguage();
+    const { heroData } = t;
+
     return (
         <Section id="hero" className="flex-col justify-between items-center px-5">
             {/* Main Content (Text + Portrait) */}
