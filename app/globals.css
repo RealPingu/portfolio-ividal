@@ -2,3 +2,9 @@
 @plugin "daisyui" {
   themes: retro --default, dim --prefersdark, retro, dim;
 }
+
+[data-theme="retro"] {
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+}

@@ -62,7 +62,7 @@ export default function ResumeDropdown({
                             href="/intividal_cv_en.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center text-xs sm:text-sm font-semibold py-2 px-3 rounded-btn border border-base-300 bg-base-100 hover:bg-success hover:text-success-content hover:border-success transition-all text-base-content text-center shadow-2xs"
+                            className="flex items-center justify-center text-xs sm:text-sm font-semibold py-2 px-3.5 rounded-full border border-base-300 bg-base-100 hover:bg-success hover:text-success-content hover:border-success transition-all text-base-content text-center shadow-2xs"
                         >
                             {enOptionLabel}
                         </a>
@@ -72,7 +72,7 @@ export default function ResumeDropdown({
                             href="/intividal_cv_es.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center text-xs sm:text-sm font-semibold py-2 px-3 rounded-btn border border-base-300 bg-base-100 hover:bg-success hover:text-success-content hover:border-success transition-all text-base-content text-center shadow-2xs"
+                            className="flex items-center justify-center text-xs sm:text-sm font-semibold py-2 px-3.5 rounded-full border border-base-300 bg-base-100 hover:bg-success hover:text-success-content hover:border-success transition-all text-base-content text-center shadow-2xs"
                         >
                             {esOptionLabel}
                         </a>

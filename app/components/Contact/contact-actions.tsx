@@ -1,38 +1,102 @@
 // app/components/Contact/contact-actions.tsx
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '@/app/context/language-context';
 
 export default function ContactActions() {
-    const { t } = useLanguage();
+    const { lang, t } = useLanguage();
     const { contactData } = t;
+    const [copied, setCopied] = useState(false);
+
+    const handleCopyEmail = (e: React.MouseEvent, email: string) => {
+        e.preventDefault();
+        e.stopPropagation();
+        navigator.clipboard.writeText(email);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
 
     return (
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto justify-center sm:justify-end">
             {contactData.links.map((link, idx) => {
                 if (link.icon === 'email') {
+                    const rawEmail = link.href.replace('mailto:', '');
+
                     return (
-                        <a
-                            key={idx}
-                            href={link.href}
-                            className="btn btn-secondary btn-sm sm:btn-md gap-2 shadow-sm w-full sm:w-auto justify-center"
-                        >
-                            <svg
-                                className="w-4 h-4"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
+                        <div key={idx} className="inline-flex items-stretch shrink-0 w-full sm:w-auto">
+                            {/* Primary Action: Direct Mail Client */}
+                            <a
+                                href={link.href}
+                                className="btn btn-secondary btn-sm sm:btn-md rounded-r-none border-r-0 gap-2 shadow-sm flex-1 sm:flex-initial justify-center"
                             >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                />
-                            </svg>
-                            {link.label}
-                        </a>
+                                <svg
+                                    className="w-4 h-4"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    />
+                                </svg>
+                                {link.label}
+                            </a>
+
+                            {/* Dropdown Toggle: Copy Email */}
+                            <div className="dropdown dropdown-end">
+                                <div
+                                    tabIndex={0}
+                                    role="button"
+                                    className="btn btn-secondary btn-sm sm:btn-md rounded-l-none border-l border-secondary-content/20 px-2 sm:px-2.5 shadow-sm"
+                                    aria-label="Email options"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-3.5 w-3.5 sm:h-4 sm:w-4"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </div>
+                                <ul
+                                    tabIndex={-1}
+                                    className="dropdown-content z-50 mt-1 w-52 p-1.5 bg-base-200 border border-base-300 rounded-box shadow-xl space-y-1.5"
+                                >
+                                    <li>
+                                        <button
+                                            type="button"
+                                            onClick={(e) => handleCopyEmail(e, rawEmail)}
+                                            className="w-full flex items-center justify-between text-xs sm:text-sm font-semibold py-2 px-3.5 rounded-full border border-base-300 bg-base-100 hover:bg-secondary hover:text-secondary-content hover:border-secondary transition-all text-base-content shadow-2xs"
+                                        >
+                                            <span>
+                                                {copied
+                                                    ? (lang === 'en' ? 'Copied!' : '¡Copiado!')
+                                                    : (lang === 'en' ? 'Copy Email' : 'Copiar Correo')}
+                                            </span>
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="h-4 w-4 shrink-0 ml-1.5 opacity-75"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                            >
+                                                {copied ? (
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                                                ) : (
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                                )}
+                                            </svg>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     );
                 }
 
