@@ -25,4 +25,4 @@ This is a standard [Next.js](https://nextjs.org/) project configured for static 
 
 ## Acknowledgments
 
-Special thanks to Muhammad Dawahreh for the open-source [portfolio-v2](https://github.com/MuhammadJaafer/portfolio-v2) project, which served as inspiration for this portfolio.
+Special thanks to [Muhammad Dawahreh](https://github.com/MuhammadJaafer#-muhammad-aldawahreh) for the open-source [portfolio-v2](https://github.com/MuhammadJaafer/portfolio-v2) project, which served as inspiration for this portfolio.
