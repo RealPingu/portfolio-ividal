@@ -6,6 +6,7 @@ import { useLanguage } from '@/app/context/language-context';
 import Portrait from '@/app/components/Hero/portrait';
 import Section from '@/app/components/UI/section';
 import ScrollIndicator from '@/app/components/Hero/scroll-indicator';
+import ResumeDropdown from '@/app/components/UI/resume-dropdown';
 
 export default function Hero() {
     const { t } = useLanguage();
@@ -24,12 +25,15 @@ export default function Hero() {
                         </h1>
                         <div className="flex flex-wrap gap-2 justify-center md:justify-start mt-2">
                             {heroData.degrees.map((role, idx) => (
-                                <span key={idx} className="badge badge-info text-xs md:text-sm">
+                                <span
+                                    key={idx}
+                                    className="badge badge-info text-xs md:text-sm h-auto py-1 px-2.5 whitespace-normal leading-snug text-left"
+                                >
                                     {role}
                                 </span>
                             ))}
                             {heroData.university && (
-                                <span className="badge badge-outline text-xs md:text-sm">
+                                <span className="badge badge-outline text-xs md:text-sm h-auto py-1 px-2.5 whitespace-normal leading-snug text-left">
                                     {heroData.university}
                                 </span>
                             )}
@@ -41,14 +45,10 @@ export default function Hero() {
                     </p>
 
                     <div className="flex gap-4 justify-center md:justify-start">
-                        <a
-                            href={heroData.buttons.getResume.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-success btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl"
-                        >
-                            {heroData.buttons.getResume.label}
-                        </a>
+                        <ResumeDropdown
+                            sizeClassName="btn-xs sm:btn-sm md:btn-md"
+                            label={heroData.buttons.getResume.label}
+                        />
                     </div>
                 </div>
 

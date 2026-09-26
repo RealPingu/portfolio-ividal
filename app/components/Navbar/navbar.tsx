@@ -4,6 +4,7 @@
 import React from 'react';
 import { useLanguage } from '@/app/context/language-context';
 import { useTheme } from '@/app/context/theme-context';
+import ResumeDropdown from '@/app/components/UI/resume-dropdown';
 
 export default function Navbar() {
     const { lang, toggleLang, t } = useLanguage();
@@ -79,20 +80,6 @@ export default function Navbar() {
                         ))}
                     </ul>
 
-                    {/* Language Switcher (Always on the right of the navbar) */}
-                    <button
-                        onClick={toggleLang}
-                        className="btn btn-ghost btn-xs sm:btn-sm font-bold text-xs tracking-wider border border-base-300 px-2 sm:px-2.5 rounded-btn hover:border-base-content/30 shrink-0"
-                        title={lang === 'en' ? 'Cambiar a Español' : 'Switch to English'}
-                        aria-label="Toggle language"
-                    >
-                        {lang === 'en' ? (
-                            <span><strong className="text-success font-black">EN</strong> / ES</span>
-                        ) : (
-                            <span>EN / <strong className="text-success font-black">ES</strong></span>
-                        )}
-                    </button>
-
                     {/* Theme Switcher (Always on the right of the navbar) */}
                     <button
                         onClick={toggleTheme}
@@ -111,17 +98,22 @@ export default function Navbar() {
                         )}
                     </button>
 
-                    {/* Resume / CV Button (Always on the right of the navbar on all screens) */}
-                    {t.navData.resumeButton && (
-                        <a
-                            href={t.navData.resumeButton.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-success btn-xs sm:btn-sm font-semibold rounded-btn shrink-0"
-                        >
-                            {t.navData.resumeButton.label}
-                        </a>
-                    )}
+                    {/* Language Switcher (Always on the right of the navbar) */}
+                    <button
+                        onClick={toggleLang}
+                        className="btn btn-ghost btn-xs sm:btn-sm font-bold text-xs tracking-wider border border-base-300 px-2 sm:px-2.5 rounded-btn hover:border-base-content/30 shrink-0"
+                        title={lang === 'en' ? 'Cambiar a Español' : 'Switch to English'}
+                        aria-label="Toggle language"
+                    >
+                        {lang === 'en' ? (
+                            <span><strong className="text-success font-black">EN</strong> / ES</span>
+                        ) : (
+                            <span>EN / <strong className="text-success font-black">ES</strong></span>
+                        )}
+                    </button>
+
+                    {/* Resume / CV Split Button with Dropdown (Always on the right of the navbar on all screens) */}
+                    <ResumeDropdown sizeClassName="btn-xs sm:btn-sm" />
                 </div>
             </div>
         </header>

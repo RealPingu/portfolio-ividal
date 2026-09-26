@@ -52,7 +52,7 @@ export default function Projects() {
                             {/* Project Details */}
                             <div className="card-body flex-1 p-6 lg:p-8 space-y-3 justify-center">
                                 <div>
-                                    <span className="badge badge-accent badge-sm font-semibold mb-2">
+                                    <span className="badge badge-accent badge-sm font-semibold mb-2 h-auto py-1 px-2.5 whitespace-normal leading-snug max-w-full text-left inline-block">
                                         {project.role}
                                     </span>
                                     <h3 className="card-title text-xl lg:text-2xl font-bold text-base-content">
@@ -69,7 +69,7 @@ export default function Projects() {
                                     {project.technologies.map((tech, tIdx) => (
                                         <span
                                             key={tIdx}
-                                            className="badge badge-sm bg-base-100 border-base-300 text-base-content text-xs font-medium"
+                                            className="badge badge-sm bg-base-100 border-base-300 text-base-content text-xs font-medium h-auto py-0.5 px-2 whitespace-normal leading-snug"
                                         >
                                             {tech}
                                         </span>

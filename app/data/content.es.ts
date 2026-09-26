@@ -13,7 +13,7 @@ export const contentEs: ContentDictionary = {
         university: "Universidad Técnica Federico Santa María",
         about: "Bienvenido a mi portafolio web. Construyo soluciones modernas enfocadas en los requerimientos de mis clientes. Me interesa todo lo relacionado con la tecnología, explorar nuevas áreas de la industria e implementar nuevas ideas.",
         buttons: {
-            getResume: { label: "Obtén mi CV", href: "/intividal_cv.pdf" },
+            getResume: { label: "Obtén mi CV", href: "/intividal_cv_es.pdf" },
         },
         portrait: "/images/hero/inti-portrait-colored.jpg",
     },
@@ -25,7 +25,7 @@ export const contentEs: ContentDictionary = {
             { label: "Proyectos", href: "#projects" },
             { label: "Contacto", href: "#contact" },
         ],
-        resumeButton: { label: "CV", href: "/intividal_cv.pdf" },
+        resumeButton: { label: "CV", href: "/intividal_cv_es.pdf" },
     },
     aboutData: {
         title: "Mi Trayectoria",

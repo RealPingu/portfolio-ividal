@@ -13,7 +13,7 @@ export const contentEn: ContentDictionary = {
         university: "Universidad Técnica Federico Santa María",
         about: "Welcome to my web portfolio. I build modern solutions focused on the requirements of my clients. I'm interested in everything tech, exploring new sides of the industry and implementing new ideas.",
         buttons: {
-            getResume: { label: "Get my resume", href: "/intividal_cv.pdf" },
+            getResume: { label: "Get my resume", href: "/intividal_cv_en.pdf" },
         },
         portrait: "/images/hero/inti-portrait-colored.jpg",
     },
@@ -25,7 +25,7 @@ export const contentEn: ContentDictionary = {
             { label: "Projects", href: "#projects" },
             { label: "Contact", href: "#contact" },
         ],
-        resumeButton: { label: "Resume", href: "/intividal_cv.pdf" },
+        resumeButton: { label: "Resume", href: "/intividal_cv_en.pdf" },
     },
     aboutData: {
         title: "My Journey",
