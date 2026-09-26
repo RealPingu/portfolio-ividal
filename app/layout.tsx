@@ -22,8 +22,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <html
             lang="en"
             data-theme="retro"
-            className={`${slabo.className} antialiased scroll-smooth snap-y snap-mandatory scroll-pt-20`}
-
+            className={`${slabo.className} antialiased scroll-smooth scroll-pt-20`}
         >
             <body className="min-h-screen flex flex-col bg-base-100 text-base-content">
                 <div className="sticky top-0 z-50 backdrop-blur-md bg-base-100/80">

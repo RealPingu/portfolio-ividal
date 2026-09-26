@@ -8,10 +8,11 @@ type SectionProps = {
 
 export default function Section({ id, children, className = "" }: SectionProps) {
     return (
-        <section id={id}
-            className={`snap-start snap-always min-h-[calc(100vh-5rem)] flex flex-col justify-start py-8 ${className}`}
+        <section
+            id={id}
+            className={`min-h-[calc(100vh-5rem)] flex flex-col justify-start py-8 ${className}`}
         >
             {children}
         </section>
-    )
+    );
 }
