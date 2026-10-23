@@ -25,7 +25,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             className={`${slabo.className} antialiased scroll-smooth scroll-pt-20`}
             suppressHydrationWarning
         >
-            <body className="min-h-screen flex flex-col bg-base-100 text-base-content transition-colors duration-200">
+            <body
+                className="min-h-screen flex flex-col bg-base-100 text-base-content transition-colors duration-200"
+                suppressHydrationWarning
+            >
                 <Providers>
                     {/* Full-width edge-to-edge sticky header */}
                     <div className="sticky top-0 z-50 w-full backdrop-blur-md bg-base-100/90 border-b border-base-200/80 shadow-xs">

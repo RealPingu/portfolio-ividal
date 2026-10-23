@@ -144,6 +144,15 @@ export const contentEn: ContentDictionary = {
                 demoUrl: "",
             },
             {
+                name: "Personal Portfolio & Engineering Showcase",
+                role: "Web Engineering & Cloud (2025 – 2026)",
+                description: "A modern, responsive bilingual portfolio built with Next.js 16, React 19, TypeScript, and Tailwind CSS. Hosted on Google Cloud with automated continuous integration and continuous deployment (CI/CD) via GitHub Actions. Features dynamic EN/ES internationalization, DaisyUI theme switching (Retro/Dim), an interactive career timeline, and an edge-to-edge layout architecture.",
+                technologies: ["Next.js", "TypeScript", "Google Cloud", "GitHub Actions", "Tailwind CSS", "DaisyUI"],
+                image: "/images/projects/project-portfolio.svg",
+                codeUrl: "https://github.com/RealPingu/portfolio-ividal",
+                demoUrl: "",
+            },
+            {
                 name: "Truck-and-Drone Delivery Optimization (k-MVDRP)",
                 role: "Algorithmic Engineering (2024)",
                 description: "High-performance combinatorial optimization algorithms in C++ solving the coordinated Multi-visit Drone Routing Problem (k-MVDRP / mFSTSP). Models multi-package payload capacity, decoupled launch and rendezvous synchronization between mobile trucks and drone fleets, and mission makespan minimization.",

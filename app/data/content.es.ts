@@ -144,6 +144,15 @@ export const contentEs: ContentDictionary = {
                 demoUrl: "",
             },
             {
+                name: "Portafolio Personal y Showcase de Ingeniería",
+                role: "Ingeniería Web y Cloud (2025 – 2026)",
+                description: "Portafolio bilingüe moderno y responsivo desarrollado con Next.js 16, React 19, TypeScript y Tailwind CSS. Alojado en infraestructura de Google Cloud con un pipeline automatizado de integración y despliegue continuo (CI/CD) mediante GitHub Actions. Cuenta con internacionalización dinámica (EN/ES), selector de temas DaisyUI (Retro/Dim), línea de tiempo interactiva y arquitectura de layout edge-to-edge.",
+                technologies: ["Next.js", "TypeScript", "Google Cloud", "GitHub Actions", "Tailwind CSS", "DaisyUI"],
+                image: "/images/projects/project-portfolio.svg",
+                codeUrl: "https://github.com/RealPingu/portfolio-ividal",
+                demoUrl: "",
+            },
+            {
                 name: "Optimización de Entregas con Camión y Drones (k-MVDRP)",
                 role: "Ingeniería Algorítmica (2024)",
                 description: "Algoritmos de optimización combinatoria y búsqueda heurística en C++ para resolver el problema de ruteo coordinado de camión y flota de drones (k-MVDRP / mFSTSP). Modela capacidad de carga útil multi-paquete, sincronización de despegue y aterrizaje desacoplada y minimización del tiempo total de misión (makespan).",
