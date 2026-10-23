@@ -24,7 +24,7 @@ export default function Skills() {
             </div>
 
             {/* Categories Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
                 {skillsData.categories.map((category, idx) => (
                     <div
                         key={idx}

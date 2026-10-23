@@ -23,7 +23,7 @@ export default function Projects() {
             </div>
 
             {/* Projects List */}
-            <div className="flex flex-col gap-8 max-w-5xl mx-auto w-full">
+            <div className="flex flex-col gap-8 w-full">
                 {projectsData.projects.map((project, idx) => {
                     const isReversed = idx % 2 === 1;
 

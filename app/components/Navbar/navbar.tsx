@@ -12,7 +12,7 @@ export default function Navbar() {
 
     return (
         <header className="w-full">
-            <div className="navbar bg-base-100/90 backdrop-blur-md shadow-xs max-w-6xl xl:max-w-7xl mx-auto px-3 sm:px-8 flex-nowrap justify-between">
+            <div className="navbar w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 flex-nowrap justify-between">
                 {/* Left Side: Hamburger (mobile/tablet) + Brand */}
                 <div className="navbar-start flex items-center gap-1 w-auto">
                     {/* Mobile Dropdown (Sections Only) */}

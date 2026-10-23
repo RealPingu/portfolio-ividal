@@ -23,12 +23,12 @@ export default function About() {
             </div>
 
             {/* 2. Interactive Career & Academic Timeline */}
-            <div className="max-w-5xl mx-auto w-full">
+            <div className="w-full">
                 <CareerTimeline />
             </div>
 
             {/* 3. Narrative Story Cards */}
-            <div className="flex flex-col gap-8 max-w-5xl mx-auto w-full pt-4">
+            <div className="flex flex-col gap-8 w-full pt-4">
                 {aboutData.cards.map((card, idx) => {
                     const isReversed = idx % 2 === 1;
 

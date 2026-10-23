@@ -13,7 +13,7 @@ export default function Hero() {
     const { heroData } = t;
 
     return (
-        <Section id="hero" className="flex-col justify-between items-center px-5">
+        <Section id="hero" className="flex-col justify-between items-center">
             {/* Main Content (Text + Portrait) */}
             <div className="flex-1 w-full flex flex-col-reverse md:flex-row items-center justify-center gap-4 md:gap-16">
                 {/* Left Column: Text */}

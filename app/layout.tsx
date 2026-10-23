@@ -27,11 +27,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
             <body className="min-h-screen flex flex-col bg-base-100 text-base-content transition-colors duration-200">
                 <Providers>
-                    <div className="sticky top-0 z-50 backdrop-blur-md bg-base-100/80">
+                    {/* Full-width edge-to-edge sticky header */}
+                    <div className="sticky top-0 z-50 w-full backdrop-blur-md bg-base-100/90 border-b border-base-200/80 shadow-xs">
                         <Navbar />
                     </div>
 
-                    <main className="flex-1 w-full max-w-6xl xl:max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-16">
+                    {/* Content area with fluid scaling and static side margins */}
+                    <main className="flex-1 w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-16">
                         {children}
                     </main>
                 </Providers>
