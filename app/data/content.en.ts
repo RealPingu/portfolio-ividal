@@ -135,12 +135,12 @@ export const contentEn: ContentDictionary = {
                 demoLabel: "Official Website",
             },
             {
-                name: "IVNeovimConfig: My working configuration",
+                name: "iv-neovim-config: My working configuration",
                 role: "Developer Tooling & Configuration (2025 – 2026)",
                 description: "A custom daily-driver Neovim setup built for Neovim 0.12+ and WSL2. Highlights native package management with zero plugin-manager bloat, an automated Wallpaper Engine integration to display live animated wallpapers through a transparent terminal, and an optional VimTeX environment.",
                 technologies: ["Lua", "Neovim", "WSL2", "LSP", "Treesitter", "Bash"],
                 image: "/images/projects/project-neovim.svg",
-                codeUrl: "https://github.com/RealPingu/IVNeovimConfig",
+                codeUrl: "https://github.com/RealPingu/iv-neovim-config",
                 demoUrl: "",
             },
             {
@@ -158,7 +158,7 @@ export const contentEn: ContentDictionary = {
                 description: "High-performance combinatorial optimization algorithms in C++ solving the coordinated Multi-visit Drone Routing Problem (k-MVDRP / mFSTSP). Models multi-package payload capacity, decoupled launch and rendezvous synchronization between mobile trucks and drone fleets, and mission makespan minimization.",
                 technologies: ["C++17", "Combinatorial Optimization", "Heuristic Search", "OOP", "Data Structures"],
                 image: "/images/projects/project-drone.svg",
-                codeUrl: "https://github.com/RealPingu/Proyecto-IA-2024",
+                codeUrl: "https://github.com/RealPingu/proyecto-ia-2024",
                 demoUrl: "",
             },
         ],
