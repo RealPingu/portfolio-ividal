@@ -79,21 +79,35 @@ export default function CareerTimeline() {
                 }`}
         >
             {/* Top Toolbar: Clean Header with Accent Dot */}
-            <div className="flex items-center gap-2 border-b border-base-300/70 pb-3 mb-6">
-                <span className="w-2.5 h-2.5 rounded-full bg-accent inline-block"></span>
-                <h3 className="font-bold text-sm sm:text-base text-base-content">
-                    {aboutData.timelineTitle || (lang === 'en' ? 'Milestone Timeline' : 'Línea de Hitos')}
-                </h3>
+            <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-accent inline-block"></span>
+                    <h3 className="font-bold text-sm sm:text-base text-base-content">
+                        {aboutData.timelineTitle || (lang === 'en' ? 'Milestone Timeline' : 'Línea de Hitos')}
+                    </h3>
+                </div>
+                {/* Subtle Expand/Collapse Indicator */}
+                <svg
+                    className={`w-4 h-4 text-base-content/60 transition-transform duration-300 ease-in-out ${
+                        isExpanded ? 'rotate-180' : 'rotate-0'
+                    }`}
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                </svg>
             </div>
 
             {/* Desktop View: Horizontal Track */}
-            <div className="hidden lg:grid grid-cols-5 gap-4 relative">
+            <div className="hidden lg:grid grid-cols-5 gap-x-4 relative">
+                {/* Row 1: Node Icons, Badges, Titles & Organizations */}
                 {aboutData.timeline.map((item, idx) => {
                     const { badgeClass, dotClass } = getItemColors(item.type);
                     const isLast = idx === aboutData.timeline.length - 1;
 
                     return (
-                        <div key={idx} className="relative flex flex-col items-center text-center space-y-2 px-1">
+                        <div key={`node-${idx}`} className="relative flex flex-col items-center text-center space-y-2 px-1">
                             {/* Horizontal connecting line to next node */}
                             {!isLast && (
                                 <div
@@ -121,16 +135,29 @@ export default function CareerTimeline() {
                                     {item.organization}
                                 </p>
                             </div>
-
-                            {/* Collapsible Description */}
-                            {isExpanded && (
-                                <div className="w-full pt-2 mt-1 border-t border-base-300/60 text-xs text-base-content/80 leading-relaxed text-left">
-                                    <p>{item.description}</p>
-                                </div>
-                            )}
                         </div>
                     );
                 })}
+
+                {/* Row 2: Collapsible Descriptions with Smooth Pure-CSS Transition */}
+                <div
+                    className={`col-span-5 grid transition-all duration-300 ease-in-out ${
+                        isExpanded ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0 pointer-events-none mt-0'
+                    }`}
+                >
+                    <div className="overflow-hidden">
+                        <div className="grid grid-cols-5 gap-x-4">
+                            {aboutData.timeline.map((item, idx) => (
+                                <div
+                                    key={`desc-${idx}`}
+                                    className="w-full pt-2.5 border-t border-base-300/60 text-xs text-base-content/80 leading-relaxed text-left px-1"
+                                >
+                                    <p>{item.description}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
             </div>
 
             {/* Mobile / Tablet View: Vertical Timeline */}
@@ -161,12 +188,18 @@ export default function CareerTimeline() {
                                         {item.title}
                                     </h4>
 
-                                    {/* Collapsible Description */}
-                                    {isExpanded && (
-                                        <div className="pt-2 mt-1 border-t border-base-300 text-xs text-base-content/80 leading-relaxed">
-                                            <p>{item.description}</p>
+                                    {/* Collapsible Description with Smooth Pure-CSS Transition */}
+                                    <div
+                                        className={`grid transition-all duration-300 ease-in-out ${
+                                            isExpanded ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0 pointer-events-none'
+                                        }`}
+                                    >
+                                        <div className="overflow-hidden">
+                                            <div className="pt-2 mt-1 border-t border-base-300 text-xs text-base-content/80 leading-relaxed">
+                                                <p>{item.description}</p>
+                                            </div>
                                         </div>
-                                    )}
+                                    </div>
                                 </div>
                                 {!isLast && <hr className={lineClass} />}
                             </li>
