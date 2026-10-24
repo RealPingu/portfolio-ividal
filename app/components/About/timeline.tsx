@@ -73,11 +73,10 @@ export default function CareerTimeline() {
                 }
             }}
             aria-expanded={isExpanded}
-            className={`w-full border-2 rounded-box p-5 sm:p-7 cursor-pointer select-none transition-all duration-200 ${
-                isExpanded
+            className={`w-full border-2 rounded-box p-5 sm:p-7 cursor-pointer select-none transition-all duration-200 ${isExpanded
                     ? 'bg-base-200/90 border-accent shadow-md ring-2 ring-accent/20'
                     : 'bg-base-200/40 border-base-300 hover:border-accent hover:bg-base-300/60 hover:shadow-lg hover:-translate-y-0.5'
-            }`}
+                }`}
         >
             {/* Top Toolbar: Clean Header with Accent Dot */}
             <div className="flex items-center gap-2 border-b border-base-300/70 pb-3 mb-6">
@@ -89,16 +88,22 @@ export default function CareerTimeline() {
 
             {/* Desktop View: Horizontal Track */}
             <div className="hidden lg:grid grid-cols-5 gap-4 relative">
-                {/* Horizontal continuous connecting line */}
-                <div className="absolute top-6 left-10 right-10 h-0.5 bg-base-300/80 -z-0" />
-
                 {aboutData.timeline.map((item, idx) => {
                     const { badgeClass, dotClass } = getItemColors(item.type);
+                    const isLast = idx === aboutData.timeline.length - 1;
 
                     return (
-                        <div key={idx} className="relative z-10 flex flex-col items-center text-center space-y-2 px-1">
+                        <div key={idx} className="relative flex flex-col items-center text-center space-y-2 px-1">
+                            {/* Horizontal connecting line to next node */}
+                            {!isLast && (
+                                <div
+                                    className="absolute top-6 -translate-y-1/2 left-1/2 w-[calc(100%+1rem)] h-0.5 bg-base-300/80 z-0"
+                                    aria-hidden="true"
+                                />
+                            )}
+
                             {/* Top Node Icon */}
-                            <div className={`w-12 h-12 rounded-full border-2 flex items-center justify-center shadow-md ${dotClass}`}>
+                            <div className={`relative z-10 w-12 h-12 rounded-full border-2 flex items-center justify-center shadow-md ${dotClass}`}>
                                 {getIcon(item.type)}
                             </div>
 
